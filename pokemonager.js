@@ -10,8 +10,8 @@
         parsedData.results.map(pokemonName => pokemonArray.push(pokemonName.name))
         return pokemonArray
 
-      } catch {
-        console.log("ERROR!!! DINGUS")
+      } catch  (error) {
+        console.error(error)
       }
     }
 
@@ -28,8 +28,8 @@
     }
     console.log(pokemonArray);
     return pokemonArray 
-      } catch{
-        console.log("ERROR! DINGUS!")
+      } catch (error) {
+        console.error(error)
       }
     }
   }
