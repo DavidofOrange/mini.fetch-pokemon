@@ -3,6 +3,7 @@
     // This should return an array of all the names of n Pokemon from the Pokemon API.
     findNames(n) {
       // Your code here.
+      //initial commit-changes
     }
 
     // This should return an array of all the Pokemon that are under a particular weight.
