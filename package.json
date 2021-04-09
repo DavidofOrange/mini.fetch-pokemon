@@ -1,0 +1,28 @@
+{
+  "name": "cc19-mini.fetch-pokemon",
+  "version": "1.0.0",
+  "description": "前回ポケモンを検索したときは、高階関数とその使用方法について学習しました。",
+  "main": "pokemonager.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha && npm run",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuroKen91/cc19-mini.fetch-pokemon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuroKen91/cc19-mini.fetch-pokemon/issues"
+  },
+  "homepage": "https://github.com/KuroKen91/cc19-mini.fetch-pokemon#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}

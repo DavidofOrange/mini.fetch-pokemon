@@ -1,19 +1,41 @@
-(() => {
+  (() => {
   class Pokemonager {
-    // This should return an array of all the names of n Pokemon from the Pokemon API.
-    findNames(n) {
-      // Your code here.
-      //initial commit-changes
+
+    async findNames(n) {
+      try {
+        let pokemonArray = [];
+        let allData = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=" + n);
+        let parsedData = await allData.json();
+
+        parsedData.results.map(pokemonName => pokemonArray.push(pokemonName.name))
+        return pokemonArray
+
+      } catch {
+        console.log("ERROR!!! DINGUS")
+      }
     }
 
-    // This should return an array of all the Pokemon that are under a particular weight.
-
-    findUnderWeight(weight) {
-      // Your code here.
-      // ** LIMIT TO THE FIRST 10 POKEMON
-      // We don't want to make too many unnecessary calls to the Pokemon API
+    async findUnderWeight(weight) {
+      try {
+    let pokemonArray = [];
+    
+    for (let i = 1; i <= 10; i++) {
+      let allData = await fetch("https://pokeapi.co/api/v2/pokemon/" + i);
+      let parsedData = await allData.json();
+      if (parsedData.weight < weight) {
+        pokemonArray.push(parsedData)
+      }
+    }
+    console.log(pokemonArray);
+    return pokemonArray 
+      } catch{
+        console.log("ERROR! DINGUS!")
+      }
     }
   }
 
+
+
   window.Pokemonager = Pokemonager;
-})();
+      })();
+
