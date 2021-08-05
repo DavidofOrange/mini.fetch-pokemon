@@ -36,6 +36,3 @@
 
   window.Pokemonager = Pokemonager;
       })();
-
-      //change for pull request
-
